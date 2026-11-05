@@ -1,0 +1,107 @@
+{
+    "manifestVersion": 1,
+    "id": "branch-policy-manager",
+    "version": "1.0.0",
+    "name": "Branch Policy Manager",
+    "description": "Quickly add and remove team reviewer approval policies on branches with bulk operations and admin access control.",
+    "publisher": "adam-wheater",
+    "categories": [
+        "Azure Repos"
+    ],
+    "tags": [
+        "branch-policies",
+        "pull-requests",
+        "reviewers",
+        "approvals",
+        "teams",
+        "bulk-operations",
+        "governance",
+        "admin"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "static/icon.png"
+    },
+    "screenshots": [
+        { "path": "static/screenshots/overview.png" },
+        { "path": "static/screenshots/bulk.png" },
+        { "path": "static/screenshots/admin.png" },
+        { "path": "static/screenshots/dark.png" }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "links": {
+        "repository": {
+            "uri": "https://github.com/adam-wheater/azure-devops-branch-policy-manager"
+        },
+        "issues": {
+            "uri": "https://github.com/adam-wheater/azure-devops-branch-policy-manager/issues"
+        },
+        "support": {
+            "uri": "https://github.com/adam-wheater/azure-devops-branch-policy-manager/issues"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/adam-wheater/azure-devops-branch-policy-manager"
+    },
+    "branding": {
+        "color": "#0078d4",
+        "theme": "dark"
+    },
+    "galleryFlags": [
+        "Preview"
+    ],
+    "contributions": [
+        {
+            "id": "branch-policy-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Branch Policy Manager hub under Repos",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "Branch Policies",
+                "order": 99,
+                "uri": "dist/BranchPolicyHub/BranchPolicyHub.html",
+                "icon": {
+                    "light": "static/icon.png",
+                    "dark": "static/icon.png"
+                }
+            }
+        }
+    ],
+    "scopes": [
+        "vso.code_manage",
+        "vso.project"
+    ],
+    "demands": [],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "static",
+            "addressable": true
+        },
+        {
+            "path": "overview.md",
+            "addressable": true
+        },
+        {
+            "path": "LICENSE",
+            "addressable": true
+        }
+    ]
+}

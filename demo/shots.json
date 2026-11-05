@@ -1,0 +1,109 @@
+[
+  {
+    "name": "overview",
+    "steps": [
+      {
+        "waitFor": "text=Current Reviewer Policies"
+      },
+      {
+        "wait": 800
+      }
+    ]
+  },
+  {
+    "name": "bulk",
+    "steps": [
+      {
+        "waitFor": "role=button[name=/Bulk Mode/]"
+      },
+      {
+        "click": "role=button[name=/Bulk Mode/]"
+      },
+      {
+        "click": "label:has-text('billing-api')"
+      },
+      {
+        "click": "label:has-text('web-portal')"
+      },
+      {
+        "click": "label:has-text('payments-worker')"
+      },
+      {
+        "waitFor": "label:has-text('hotfix/retry-backoff')"
+      },
+      {
+        "click": "label:has-text('develop')"
+      },
+      {
+        "click": "label:has-text('main')"
+      },
+      {
+        "click": "label:has-text('QA Team')"
+      },
+      {
+        "click": "role=button[name=/Add Policies/]"
+      },
+      {
+        "click": "role=button[name='Add 6']"
+      },
+      {
+        "waitFor": "text=Results"
+      }
+    ],
+    "selector": ".ax-card:has(.ax-card__title:text-is('Bulk Mode'))"
+  },
+  {
+    "name": "admin",
+    "fullPage": true,
+    "steps": [
+      {
+        "waitFor": "role=tab[name=/Admin/]"
+      },
+      {
+        "click": "role=tab[name=/Admin/]"
+      },
+      {
+        "waitFor": "text=Authorized users"
+      },
+      {
+        "wait": 400
+      }
+    ]
+  },
+  {
+    "name": "dark",
+    "colorScheme": "dark",
+    "steps": [
+      {
+        "waitFor": "role=button[name=/Bulk Mode/]"
+      },
+      {
+        "click": "role=button[name=/Bulk Mode/]"
+      },
+      {
+        "click": "label:has-text('billing-api')"
+      },
+      {
+        "click": "label:has-text('web-portal')"
+      },
+      {
+        "click": "label:has-text('payments-worker')"
+      },
+      {
+        "waitFor": "label:has-text('hotfix/retry-backoff')"
+      },
+      {
+        "click": "label:has-text('develop')"
+      },
+      {
+        "click": "label:has-text('main')"
+      },
+      {
+        "click": "label:has-text('QA Team')"
+      },
+      {
+        "wait": 600
+      }
+    ]
+  }
+]
